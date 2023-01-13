@@ -1,3 +1,7 @@
+function updateDisplay(currentValue){
+    // do stuff here
+    return 1
+}
 
 function addFunc(inpArray){
     return inpArray.reduce((accumulator, current)=> accumulator + current)
