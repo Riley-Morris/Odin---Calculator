@@ -1,4 +1,8 @@
 
+function addFunc(inpArray){
+    return inpArray.reduce((accumulator, current)=> accumulator + current)
+}
+
 function subFunc (inpArray){
     return inpArray.reduce((accumulator, current) => accumulator - current)
 };
