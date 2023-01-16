@@ -1,18 +1,32 @@
+body, html {
+    height: 100%;
+}
+
 .calculator {
     border: 2px solid orange;
+    width: 40%;
+    height: 40%;
+    min-width: 200px;
+    min-height: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 .calcRow {
     display: flex;
+    flex: 1 1 0;
+
 }
 #display {
     box-shadow: inset 2px 5px 20px rgb(240, 241, 122);
-    flex: 2 1 0;
-    text-align: right;
+    flex: 4 1 0;
+    justify-content: flex-start;
 }
 button {
     flex: 1 1 0;
 }
 #clear {
-    flex: 0.5 1 0;
+    flex: 1 1 0;
 }
