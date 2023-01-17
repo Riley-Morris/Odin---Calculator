@@ -1,34 +1,17 @@
-const tester = [7, 3, 1, 5]
 
+// Global variables initialize
 let currentOperator 
-function updateDisplay(currentValue){
+let currentValue = 0
+let counter = 0
+
+function updateDisplay(numValue){
     // do stuff here
     return 1
 }
 
-function addFunc(inpArray){
-    currentOperator = '+'
-    return inpArray.reduce((accumulator, current)=> accumulator + current)
+function numClickHandler(numValue) {
+
 }
 
-function subFunc (inpArray){
-    currentOperator = '-'
-    return inpArray.reduce((accumulator, current) => accumulator - current)
-};
-
-function multFunc (inpArray){
-    currentOperator = '*'
-    return inpArray.reduce((accumulator, current) => accumulator * current)
-}
-
-function divFunc (inpArray){
-    currentOperator = '/'
-    return inpArray.reduce((accumulator, current) => accumulator/current)
-}
 
 // function equalButton(operator)
-
-console.log(divFunc(tester))
-
-
-console.log(currentOperator)
