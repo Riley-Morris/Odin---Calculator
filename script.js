@@ -1,28 +1,40 @@
 
 // Global variables initialize
-let currentOperator = ''
+let operatorStorage = ''
 let numberStorage = []
 //Define operators within an Object to use later to shorten checks
 const operatorFunctions = {
-    '+': (a, b) => parseFloat(a) + parseFloat(b),
-    '-': (a, b) =>parseFloat(a) - parseFloat(b),
-    '*': (a, b) =>parseFloat(a) * parseFloat(b),
-    '/': (a, b) =>parseFloat(a) / parseFloat(b),
+    '+': (a, b) => a + b,
+    '-': (a, b) =>a - b,
+    '*': (a, b) =>a * b,
+    '/': (a, b) =>a / b
 }
 function updateDisplay(numValue){
     // do stuff here
     return 1
 }
 // handdle clicks of numbers, will concatenate number if no operator
-//is currently selected, will mathematically assess the last operator
-//number combination if the number click occurs after operator has been selected
+//is currently selected or add to number storage
 function numClickHandler(numValue) {
-    if (numberStorage.length > 0 && currentOperator === '') {
-        numberStorage[0] = numberStorage[0] + numValue.toString()
-    }else if (numberStorage > 0 && currentOperator ==! ''){
-        if (currentOperator)
+    // if trying to combine 1 digit numbers to make something larger than 9
+    if (numberStorage.length > 0) {
+        numberStorage[0] = parseFloat(numberStorage[0].toString + numValue)
+    
+    }else {
+        numberStorage.push(numValue)
     }
 }
 
+//operator button func
+//check whether there are already 2 nums in storage and will operate if clicked
+function operatorHandler(operatorValue){
+    if (operatorStorage === '') {
+        operatorStorage = operatorValue
+    } else {
+        numberStorage  = [operatorFunctions[operatorStorage](numberStorage[0], numberStorage[1])]
+    }
+}
+//else if (numberStorage > 0 && currentOperator ==! ''){
+    //numberStorage[0] = operatorFunctions[currentOperator](numberStorage[0] + numValue)}
 
 // function equalButton(operator)
