@@ -33,7 +33,12 @@ function operatorHandler(operatorValue){
     } else {
         numberStorage  = [operatorFunctions[operatorStorage](numberStorage[0], numberStorage[1])]
         operatorStorage = operatorValue
+        //updateDisplay(numberStorage[0])
     }
 }
 
-// function equalButton(operator)
+//make sure there are 2 numbers in storage, else just keep numStorage the same
+//run update display at end
+function equalButton(operator){
+    
+}
