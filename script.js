@@ -32,9 +32,8 @@ function operatorHandler(operatorValue){
         operatorStorage = operatorValue
     } else {
         numberStorage  = [operatorFunctions[operatorStorage](numberStorage[0], numberStorage[1])]
+        operatorStorage = operatorValue
     }
 }
-//else if (numberStorage > 0 && currentOperator ==! ''){
-    //numberStorage[0] = operatorFunctions[currentOperator](numberStorage[0] + numValue)}
 
 // function equalButton(operator)
