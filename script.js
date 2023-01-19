@@ -1,8 +1,10 @@
 
 // Global variables initialize
-let operatorStorage = ''
-let numberStorage = []
-let toggler = 0
+let operatorStorage = '';
+let numberStorage = [];
+let toggler = 0;
+
+
 //Define operators within an Object to use later to shorten checks
 const operatorFunctions = {
     '+': (a, b) => a + b,
@@ -11,8 +13,8 @@ const operatorFunctions = {
     '/': (a, b) =>a / b
 }
 function updateDisplay(numValue){
-    // do stuff here
-    return 1
+    const displayElement = document.getElementById('display');
+    displayElement.innerHTML = numValue
 }
 // handdle clicks of numbers, will concatenate number if no operator
 //is currently selected or add to number storage
@@ -26,7 +28,7 @@ function numClickHandler(numValue) {
         numberStorage.push(numValue)
         toggler = 1
     }
-}
+};
 
 //operator button func
 //check whether there are already 2 nums in storage and will operate if clicked
@@ -39,7 +41,7 @@ function operatorHandler(operatorValue){
         operatorStorage = operatorValue
         //updateDisplay(numberStorage[0])
     }
-}
+};
 
 //make sure there are 2 numbers in storage, else just keep numStorage the same
 //run update display at end
@@ -50,4 +52,4 @@ function equalButton(){
         operatorStorage = ''
     }
     //updateDisplay(numberStorage[0])
-}
+};
