@@ -2,7 +2,8 @@
 // Global variables initialize
 let operatorStorage = '';
 let numberStorage = [];
-let toggler = 0;
+let numberToggler = 0;
+let decimalToggler = 0
 
 
 //Define operators within an Object to use later to shorten checks
@@ -18,15 +19,21 @@ function updateDisplay(numValue){
 }
 // handdle clicks of numbers, will concatenate number if no operator
 //is currently selected or add to number storage
-//toggler set to 1 to check if user wants to create something larger than 9
+//numberToggler set to 1 to check if user wants to create something larger than 9
 function numClickHandler(numValue) {
     // if trying to combine 1 digit numbers to make something larger than 9
-    if (numberStorage.length > 0 && toggler === 1) {
+    if (numberStorage.length > 0 && numberToggler === 1 && decimalToggler === 0) {
         numberStorage[numberStorage.length - 1] = parseFloat(numberStorage[numberStorage.length - 1].toString() + numValue.toString())
         updateDisplay(numberStorage[numberStorage.length - 1])
-    }else {
+    }else if(decimalToggler === 1){
+        numberStorage[numberStorage.length - 1] = parseFloat(numberStorage[numberStorage.length - 1].toString() + '.' + numValue.toString())
+        decimalToggler = 0
+        console.log(numberStorage)
+        updateDisplay(numberStorage[numberStorage.length - 1])
+    }
+    else {
         numberStorage.push(numValue)
-        toggler = 1
+        numberToggler = 1
         updateDisplay(numberStorage[numberStorage.length - 1])
     }
 };
@@ -34,7 +41,7 @@ function numClickHandler(numValue) {
 //operator button func
 //check whether there are already 2 nums in storage and will operate if clicked
 function operatorHandler(operatorValue){
-    toggler = 0
+    numberToggler = 0
     if (operatorStorage === '') {
         operatorStorage = operatorValue
     } else {
@@ -49,8 +56,19 @@ function operatorHandler(operatorValue){
 function equalButton(){
     if (numberStorage.length > 1){
         numberStorage  = [operatorFunctions[operatorStorage](numberStorage[0], numberStorage[1])]
-        toggler = 0
+        numberToggler = 0
         operatorStorage = ''
     }
     updateDisplay(numberStorage[0])
 };
+
+function decimalHandler(){
+    if (numberStorage.length < 1) {
+        numberStorage[0] = 0;
+        decimalToggler = 1
+        updateDisplay(numberStorage.toString() + '.')
+    }else {
+        decimalToggler = 1
+        updateDisplay(numberStorage.toString() + '.')
+    }
+}
