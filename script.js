@@ -28,7 +28,6 @@ function numClickHandler(numValue) {
     }else if(decimalToggler === 1){
         numberStorage[numberStorage.length - 1] = parseFloat(numberStorage[numberStorage.length - 1].toString() + '.' + numValue.toString())
         decimalToggler = 0
-        console.log(numberStorage)
         updateDisplay(numberStorage[numberStorage.length - 1])
     }
     else {

@@ -10,36 +10,38 @@
 <body>
 
 <!-- Main Calculator wrapped in div flexbox -->
-<div class="calculator">
-    <div class = 'calcRow'>
-        <div id = 'display'>0</div>
-        <button id = 'clear' onclick="clearHandler()">Clear</button>
+<div class = 'container'>
+    <div class="calculator">
+        <div class = 'calcRow' id = 'topRow'>
+            <div id = 'display'>0</div>
+            <button id = 'clear' onclick="clearHandler()">Clear</button>
+        </div>
+        <div class = 'calcRow'>
+            <button id= 'one' onclick="numClickHandler(1)">1</button>
+            <button id = 'two' onclick="numClickHandler(2)">2</button>
+            <button id = 'three' onclick="numClickHandler(3)">3</button>
+            <button id = 'divide' onclick = "operatorHandler('/')">÷</button>
+        </div>
+        <div class = 'calcRow'>
+            <button id = 'four' onclick="numClickHandler(4)">4</button>
+            <button id = 'five' onclick="numClickHandler(5)">5</button>
+            <button id = 'six' onclick="numClickHandler(6)">6</button>
+            <button id = 'multiply' onclick = "operatorHandler('*')">*</button>
+        </div>
+        <div class = 'calcRow'>
+            <button id = 'seven' onclick="numClickHandler(7)">7</button>
+            <button id = 'eight' onclick="numClickHandler(8)">8</button>
+            <button id = 'nine' onclick="numClickHandler(9)">9</button>
+            <button id = 'subtract' onclick = "operatorHandler('-')">-</button>
+        </div>
+        <div class = 'calcRow'>
+            <button id = 'zero' onclick="numClickHandler(0)">0</button>
+            <button id = 'decimal' onclick = "decimalHandler()">.</button>
+            <button id = 'equal' onclick = "equalButton()">=</button>
+            <button id = 'add' onclick = "operatorHandler('+')">+</button>
+        </div>    
+    
     </div>
-    <div class = 'calcRow'>
-        <button id= 'one' onclick="numClickHandler(1)">1</button>
-        <button id = 'two' onclick="numClickHandler(2)">2</button>
-        <button id = 'three' onclick="numClickHandler(3)">3</button>
-        <button id = 'divide' onclick = "operatorHandler('/')">÷</button>
-    </div>
-    <div class = 'calcRow'>
-        <button id = 'four' onclick="numClickHandler(4)">4</button>
-        <button id = 'five' onclick="numClickHandler(5)">5</button>
-        <button id = 'six' onclick="numClickHandler(6)">6</button>
-        <button id = 'multiply' onclick = "operatorHandler('*')">*</button>
-    </div>
-    <div class = 'calcRow'>
-        <button id = 'seven' onclick="numClickHandler(7)">7</button>
-        <button id = 'eight' onclick="numClickHandler(8)">8</button>
-        <button id = 'nine' onclick="numClickHandler(9)">9</button>
-        <button id = 'subtract' onclick = "operatorHandler('-')">-</button>
-    </div>
-    <div class = 'calcRow'>
-        <button id = 'zero' onclick="numClickHandler(0)">0</button>
-        <button id = 'decimal' onclick = "decimalHandler()">.</button>
-        <button id = 'equal' onclick = "equalButton()">=</button>
-        <button id = 'add' onclick = "operatorHandler('+')">+</button>
-    </div>    
-
 </div>
 
 </body>
