@@ -72,3 +72,10 @@ function decimalHandler(){
         updateDisplay(numberStorage.toString() + '.')
     }
 }
+function clearHandler() {
+    numberStorage = []
+    decimalToggler = 0
+    numberToggler = 0
+    operatorStorage = ''
+    updateDisplay(0)
+}
