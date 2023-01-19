@@ -23,10 +23,11 @@ function numClickHandler(numValue) {
     // if trying to combine 1 digit numbers to make something larger than 9
     if (numberStorage.length > 0 && toggler === 1) {
         numberStorage[numberStorage.length - 1] = parseFloat(numberStorage[numberStorage.length - 1].toString() + numValue.toString())
-    
+        updateDisplay(numberStorage[numberStorage.length - 1])
     }else {
         numberStorage.push(numValue)
         toggler = 1
+        updateDisplay(numberStorage[numberStorage.length - 1])
     }
 };
 
@@ -39,7 +40,7 @@ function operatorHandler(operatorValue){
     } else {
         numberStorage  = [operatorFunctions[operatorStorage](numberStorage[0], numberStorage[1])]
         operatorStorage = operatorValue
-        //updateDisplay(numberStorage[0])
+        updateDisplay(numberStorage[0])
     }
 };
 
@@ -51,5 +52,5 @@ function equalButton(){
         toggler = 0
         operatorStorage = ''
     }
-    //updateDisplay(numberStorage[0])
+    updateDisplay(numberStorage[0])
 };
