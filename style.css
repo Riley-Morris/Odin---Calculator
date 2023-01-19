@@ -10,8 +10,8 @@ body {
    }
 .calculator {
     border: 2px solid rgb(0, 0, 0);
-    width: 40%;
-    height: 40%;
+    width: 60%;
+    height: 60%;
     min-width: 200px;
     min-height: 300px;
     margin: auto;
@@ -23,7 +23,7 @@ body {
 
 .container {
     position: relative;
-    left: -25%;
+    left: 25%
     
 }
 .calcRow {
