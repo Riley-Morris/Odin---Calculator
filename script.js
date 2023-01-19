@@ -2,6 +2,7 @@
 // Global variables initialize
 let operatorStorage = ''
 let numberStorage = []
+let toggler = 0
 //Define operators within an Object to use later to shorten checks
 const operatorFunctions = {
     '+': (a, b) => a + b,
