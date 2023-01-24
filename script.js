@@ -9,10 +9,18 @@ let decimalToggler = 0
 //numerical keypress listener, will only accept numbers because of inFinite
 window.addEventListener('keydown', e => {
     const keyValue = e.key
+    console.log(keyValue)
     if (isFinite(keyValue)) {
         numClickHandler(keyValue)
     }else if (keyValue === '=') { //|| keyValue === 'enter' - this causes numclick if over a button)
         equalButton()
+    }else if (keyValue === '-' || keyValue === '/') {
+        operatorHandler(keyValue)
+    }else if (keyValue === 'x'){
+        operatorHandler('*')
+        ///WHY IS THIS CONCATENATING??>?????
+    }else if (keyValue === 't'){
+        operatorHandler('+')
     }
 })
 
