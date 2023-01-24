@@ -5,6 +5,16 @@ let numberStorage = [];
 let numberToggler = 0;
 let decimalToggler = 0
 
+//set up eventlisteners
+//numerical keypress listener, will only accept numbers because of inFinite
+window.addEventListener('keydown', e => {
+    const keyValue = e.key
+    if (isFinite(keyValue)) {
+        numClickHandler(keyValue)
+    }
+})
+
+
 
 //Define operators within an Object to use later to shorten checks
 const operatorFunctions = {
