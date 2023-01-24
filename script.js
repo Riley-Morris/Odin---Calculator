@@ -11,8 +11,11 @@ window.addEventListener('keydown', e => {
     const keyValue = e.key
     if (isFinite(keyValue)) {
         numClickHandler(keyValue)
+    }else if (keyValue === '=') { //|| keyValue === 'enter' - this causes numclick if over a button)
+        equalButton()
     }
 })
+
 
 
 
