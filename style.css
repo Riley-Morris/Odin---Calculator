@@ -37,6 +37,7 @@ body {
     text-align: end;
     padding-right: 5%;
     font-size: 60%;
+    overflow-x: auto;
     
 }
 button {

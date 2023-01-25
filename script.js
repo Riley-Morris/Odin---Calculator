@@ -12,13 +12,13 @@ window.addEventListener('keydown', e => {
     console.log(keyValue)
     if (isFinite(keyValue)) {
         numClickHandler(keyValue)
-    }else if (keyValue === '=' || keyValue === 'Enter') {
+    }else if (keyValue === '=') {
         equalButton()
     }else if (keyValue === '-' || keyValue === '/') {
         operatorHandler(keyValue)
     }else if (keyValue === 'x'){
         operatorHandler('*')
-        ///WHY IS THIS CONCATENATING??>?????
+    
     }else if (keyValue === 't'){
         operatorHandler('+')
     }else if (keyValue === 'Backspace'){
