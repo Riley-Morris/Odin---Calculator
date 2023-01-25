@@ -12,7 +12,7 @@ window.addEventListener('keydown', e => {
     console.log(keyValue)
     if (isFinite(keyValue)) {
         numClickHandler(keyValue)
-    }else if (keyValue === '=') { //|| keyValue === 'enter' - this causes numclick if over a button)
+    }else if (keyValue === '=' || keyValue === 'Enter') {
         equalButton()
     }else if (keyValue === '-' || keyValue === '/') {
         operatorHandler(keyValue)
@@ -36,7 +36,12 @@ const operatorFunctions = {
 }
 function updateDisplay(numValue){
     const displayElement = document.getElementById('display');
+    if (numValue === Infinity){
+        displayElement.innerHTML = 'Undefined'
+    }else {
+    console.log(numValue)
     displayElement.innerHTML = numValue
+    }
 }
 // handdle clicks of numbers, will concatenate number if no operator
 //is currently selected or add to number storage
