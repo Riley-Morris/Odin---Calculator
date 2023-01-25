@@ -21,11 +21,10 @@ window.addEventListener('keydown', e => {
         ///WHY IS THIS CONCATENATING??>?????
     }else if (keyValue === 't'){
         operatorHandler('+')
+    }else if (keyValue === 'Backspace'){
+        clearHandler()
     }
 })
-
-
-
 
 //Define operators within an Object to use later to shorten checks
 const operatorFunctions = {
