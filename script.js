@@ -18,11 +18,12 @@ window.addEventListener('keydown', e => {
         operatorHandler(keyValue)
     }else if (keyValue === 'x'){
         operatorHandler('*')
-    
     }else if (keyValue === 't'){
         operatorHandler('+')
     }else if (keyValue === 'Backspace'){
         clearHandler()
+    }else if (keyValue === '.'){
+        decimalHandler()
     }
 })
 
