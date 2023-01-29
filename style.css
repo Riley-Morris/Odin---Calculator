@@ -1,7 +1,7 @@
 body, html {
     height: 100%;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.9em;
+    
 
 }
 body {
@@ -10,25 +10,34 @@ body {
    }
 .calculator {
     border: 2px solid rgb(0, 0, 0);
-    width: 60%;
-    height: 60%;
+    width: 40vh;
+    height: 60vh;
     min-width: 200px;
     min-height: 300px;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    font-size: 800%;
    
 }
 
+.buttonImages{
+    border-radius: 30px;
+    border: solid black;
+    border-width: 7px;
+}
+.buttonLegend{
+  
+}
 .container {
     position: relative;
-    left: 25%
+    display: flex;
     
 }
 .calcRow {
     display: flex;
-    flex: 1 1 0;
+    flex: 1 0 0;
 
 }
 #display {
@@ -41,13 +50,10 @@ body {
     
 }
 button {
-    flex: 1 1 0;
-}
-#clear {
-    flex: 1 1 0;
+    flex: 1 0 0;
+   
 }
 
 #topRow{
-    /* align-items: center;
-    max-height: max-content; */
+   
 }
