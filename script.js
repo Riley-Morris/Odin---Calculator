@@ -104,3 +104,6 @@ function clearHandler() {
     operatorStorage = ''
     updateDisplay(0)
 }
+
+/* t keyboard is concatenating?! but differently than if button were pressed 
+calling the same function */
