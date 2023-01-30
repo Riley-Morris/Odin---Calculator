@@ -1,7 +1,7 @@
 body, html {
     height: 100%;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    
+
 
 }
 body {
@@ -12,14 +12,12 @@ body {
     border: 2px solid rgb(0, 0, 0);
     width: 50vh;
     height: 80vh;
-    min-width: 200px;
-    min-height: 300px;
     margin-top: 5%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    font-size: 800%;
     flex: none;
+    max-height: fit-content;
    
 }
 
@@ -50,11 +48,13 @@ body {
 .container {
     position: relative;
     display: flex;
+ 
     
 }
 .calcRow {
     display: flex;
     flex: 1 0 0;
+   
 
 }
 #display {
@@ -62,9 +62,9 @@ body {
     flex: 4 1 0;
     text-align: end;
     padding-right: 5%;
-    font-size: 60%;
+    font-size: 400%;
     overflow-x: auto;
-    
+    height: fit-content;
 }
 button {
     flex: 1 0 0;
@@ -72,5 +72,10 @@ button {
 }
 
 #topRow{
-   
+    display: flex;
+    height: auto;
+    flex: initial;
+}
+#clear{
+    min-width: 25%;
 }
