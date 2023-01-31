@@ -10,6 +10,7 @@ body {
 .container {
     position: relative;
     display: flex; 
+    justify-content: center;
 } 
    
 .calculator {
@@ -22,6 +23,7 @@ body {
     flex-direction: column; 
     flex: none;
     max-height: fit-content;
+    
    
 }
 
@@ -63,17 +65,17 @@ body {
     padding-right: 5%;
     font-size: 400%;
     overflow-x: auto;
+    border: solid black 3px;
 }
 button {
     flex: 1 0 0;
-   
+    border: solid black 2px;
 }
 
 #topRow{
     display: flex;
     height: auto;
     flex: initial;
-    min-height: 20%;
 }
 #clear{
     min-width: 25%;
