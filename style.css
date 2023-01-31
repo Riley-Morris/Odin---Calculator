@@ -80,3 +80,13 @@ button {
 #clear{
     min-width: 25%;
 }
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(11, 13, 131);
+    color: white;
+    text-align: center;
+    opacity: 90%;
+  }
