@@ -105,5 +105,6 @@ function clearHandler() {
     updateDisplay(0)
 }
 
+fitty('#clear')
 /* t keyboard is concatenating?! but differently than if button were pressed 
 calling the same function */
