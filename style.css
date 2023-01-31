@@ -37,11 +37,13 @@ body {
 .buttonLegend{
     display: flex;
     flex-direction: column;
-    flex: none;
     margin-top: 5%;
+    font-size: 20px;
+    height: 80vh;
 }
 .imageContainer{
     display: flex;
+    flex: 1 0 0;
     justify-content:flex-start;
     align-items: center;
     padding-left: 10%;
@@ -72,6 +74,10 @@ button {
     font-size: 55px;
     border: solid black 2px;
     overflow: hidden;
+}
+button:hover {
+    background-color:#8f8484;
+    transition: 0.4s;
 }
 
 #topRow{
