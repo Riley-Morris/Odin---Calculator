@@ -88,7 +88,10 @@ function equalButton(){
 };
 
 function decimalHandler(){
-    if (numberStorage.length < 1) {
+    if(decimalToggler = 1){
+        // do nothing
+    }
+    else if (numberStorage.length < 1) {
         numberStorage[0] = 0;
         decimalToggler = 1
         updateDisplay(numberStorage.toString() + '.')
