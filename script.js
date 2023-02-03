@@ -57,7 +57,7 @@ function numClickHandler(numValue) {
         updateDisplay(numberStorage[numberStorage.length - 1])
     }
     else {
-        numberStorage.push(numValue)
+        numberStorage.push(parseFloat(numValue))
         numberToggler = 1
         updateDisplay(numberStorage[numberStorage.length - 1])
     }
