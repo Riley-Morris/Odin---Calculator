@@ -108,7 +108,6 @@ function clearHandler() {
     updateDisplay(0)
 }
 
-fitty('#clear')
+
 /* t keyboard is concatenating?! but differently than if button were pressed 
 calling the same function */
-/* cannot add 2 numbers with decimals in them */
