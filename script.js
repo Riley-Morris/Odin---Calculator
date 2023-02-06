@@ -3,7 +3,8 @@
 let operatorStorage = '';
 let numberStorage = [];
 let numberToggler = 0;
-let decimalToggler = 0
+let decimalToggler = 0 
+let operatorToggler = 0
 
 //set up eventlisteners
 //numerical keypress listener, will only accept numbers because of inFinite
@@ -66,13 +67,18 @@ function numClickHandler(numValue) {
 //operator button func
 //check whether there are already 2 nums in storage and will operate if clicked
 function operatorHandler(operatorValue){
-    numberToggler = 0
     if (operatorStorage === '') {
         operatorStorage = operatorValue
-    } else {
+        numberToggler = 0
+        operatorToggler = 1
+    } /* ignore operator input if the is one already stored  */
+    else if (operatorToggler = 1){
+       /* do nothing */
+    }else {
         numberStorage  = [operatorFunctions[operatorStorage](numberStorage[0], numberStorage[1])]
         operatorStorage = operatorValue
         updateDisplay(numberStorage[0])
+        operatorToggler = 0
     }
 };
 
