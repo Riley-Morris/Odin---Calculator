@@ -45,7 +45,7 @@ function updateDisplay(numValue){
         displayElement.innerHTML = 'Undefined'
         alert("Please don't create infinities. It hurts")
     }else {
-    displayElement.innerHTML = roundNumber(numValue, 10)
+    displayElement.innerHTML = roundNumber(numValue, 6)
     }
 }
 // handle clicks of numbers, will concatenate number if no operator
