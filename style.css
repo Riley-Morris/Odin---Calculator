@@ -37,10 +37,7 @@ body {
 .buttonLegend{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 7%;
-    right: 110vh;
-    /* margin-top: 5%; */
+    margin-top: 5%;
     font-size: 20px;
     height: 75vh;
 }
