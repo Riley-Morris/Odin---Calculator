@@ -35,17 +35,20 @@ const operatorFunctions = {
     '*': (a, b) =>a * b,
     '/': (a, b) =>a / b
 }
+/* round numbers to dec decimal places to avoid overcrowding display*/
+function roundNumber(num, dec) {
+    return Math.round(num * Math.pow(10, dec)) / Math.pow(10, dec);
+  }
 function updateDisplay(numValue){
     const displayElement = document.getElementById('display');
     if (numValue === Infinity){
         displayElement.innerHTML = 'Undefined'
         alert("Please don't create infinities. It hurts")
     }else {
-    console.log(numValue)
-    displayElement.innerHTML = numValue
+    displayElement.innerHTML = roundNumber(numValue, 10)
     }
 }
-// haddle clicks of numbers, will concatenate number if no operator
+// handle clicks of numbers, will concatenate number if no operator
 //is currently selected or add to number storage
 //numberToggler set to 1 to check if user wants to create something larger than 9
 function numClickHandler(numValue) {
