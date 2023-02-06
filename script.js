@@ -39,12 +39,13 @@ function updateDisplay(numValue){
     const displayElement = document.getElementById('display');
     if (numValue === Infinity){
         displayElement.innerHTML = 'Undefined'
+        alert("Please don't divide by 0. It hurts")
     }else {
     console.log(numValue)
     displayElement.innerHTML = numValue
     }
 }
-// handdle clicks of numbers, will concatenate number if no operator
+// haddle clicks of numbers, will concatenate number if no operator
 //is currently selected or add to number storage
 //numberToggler set to 1 to check if user wants to create something larger than 9
 function numClickHandler(numValue) {
@@ -113,7 +114,3 @@ function clearHandler() {
     operatorStorage = ''
     updateDisplay(0)
 }
-
-
-/* t keyboard is concatenating?! but differently than if button were pressed 
-calling the same function */
