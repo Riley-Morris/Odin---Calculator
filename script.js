@@ -39,7 +39,7 @@ function updateDisplay(numValue){
     const displayElement = document.getElementById('display');
     if (numValue === Infinity){
         displayElement.innerHTML = 'Undefined'
-        alert("Please don't divide by 0. It hurts")
+        alert("Please don't create infinities. It hurts")
     }else {
     console.log(numValue)
     displayElement.innerHTML = numValue
@@ -73,13 +73,14 @@ function operatorHandler(operatorValue){
         numberToggler = 0
         operatorToggler = 1
     } /* ignore operator input if the is one already stored  */
-    else if (operatorToggler = 1){
+    else if (operatorToggler = 1 && numberToggler === 0){
        /* do nothing */
     }else {
         numberStorage  = [operatorFunctions[operatorStorage](numberStorage[0], numberStorage[1])]
         operatorStorage = operatorValue
         updateDisplay(numberStorage[0])
         operatorToggler = 0
+        numberToggler = 0
     }
 };
 
